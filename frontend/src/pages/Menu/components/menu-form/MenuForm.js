@@ -9,7 +9,7 @@ import {Panel} from "../DeletePanel/Panel";
 
 
 export const MenuForm = ({
-                             menu: {id, title, imageUrl, content}
+                             menu: {id, title, imageUrl, content},
                          }) => {
     const [imageUrlValue, setImageUrlValue] = useState(imageUrl);
     const [titleValue, setTitleValue] = useState(title);
@@ -37,7 +37,7 @@ export const MenuForm = ({
     const onTitleChange = ({target}) => setTitleValue(target.value);
 
     return (
-        <div >
+        <div>
             <Input
                 value={imageUrlValue}
                 placeholder="Изображение..."
