@@ -1,0 +1,14 @@
+
+body {
+    background-image: url("C:\Users\XtraMem\WebstormProjects\web-app\frontend\src\misc\images\MainBg.JPG");
+    background-color: black;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "Manrope", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 3.5rem;
+    letter-spacing: -0.021em;
+}
+

@@ -1,0 +1,1 @@
+export const selectMenuPos = ({ menu }) => menu
