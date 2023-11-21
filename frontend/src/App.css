@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("C:\Users\XtraMem\WebstormProjects\web-app\frontend\src\misc\images\MainBg.JPG");
+    background-image: url("https://i.imgur.com/6HIZS9Q.jpg");
     background-color: black;
     background-repeat: no-repeat;
     color: white;
@@ -12,3 +12,7 @@ body {
     letter-spacing: -0.021em;
 }
 
+/*<a href="https://imgur.com/6HIZS9Q"><img src="https://i.imgur.com/6HIZS9Q.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/vM92Mui"><img src="https://i.imgur.com/vM92Mui.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/a18UTzB"><img src="https://i.imgur.com/a18UTzB.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/Wv8O3G5"><img src="https://i.imgur.com/Wv8O3G5.jpg" title="source: imgur.com" /></a>*/
