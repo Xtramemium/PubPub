@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Search } from '../../components';
-import { request } from '../../utils';
-import { PAGINATION_LIMIT } from '../../constants';
+import { checkAccess, request } from '../../utils';
+import { PAGINATION_LIMIT, ROLES } from '../../constants';
 import { debounce } from '../../utils';
 import { SingleMenuPos } from './components';
 import { FaArrowDown } from 'react-icons/fa';
@@ -14,6 +14,7 @@ export const AllMenuPositions = () => {
 	const [page, setPage] = useState(1);
 	const [searchPhrase, setSearchPhrase] = useState('');
 	const [shouldSearch, setShouldSearch] = useState(false);
+	const userRole = useSelector(selectUserRole);
 
 	useEffect(() => {
 		request(
@@ -26,16 +27,21 @@ export const AllMenuPositions = () => {
 	}, [page, shouldSearch]);
 	const startDelayedSearch = useMemo(() => debounce(setShouldSearch, 2000), []);
 
-	// const menuSelector = useSelector(selectMenuPos);
-	// console.log(menuSelector,'menu store')
 	const onSearch = ({ target }) => {
 		setSearchPhrase(target.value);
 		startDelayedSearch(!shouldSearch);
 	};
 
+	const isAdmin = checkAccess([ROLES.ADMIN], userRole);
+
 	return (
 		<div className="flex justify-center items-center">
 			<div>
+				{isAdmin && (
+					<div>
+						<button>Добавить меню</button>
+					</div>
+				)}
 				<div className="flex justify-center items-center">
 					<Search searchPhrase={searchPhrase} onChange={onSearch} />
 				</div>

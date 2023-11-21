@@ -1,4 +1,3 @@
-import { request } from "../utils";
+import { request } from '../utils';
 
-export const removeMenuPosAsync = (id) => () =>
-    request(`/posts/${id}`, 'DELETE');
+export const removeMenuPosAsync = (id) => () => request(`/menu/${id}`, 'DELETE');

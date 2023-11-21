@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { useLayoutEffect } from 'react';
 import { setUser } from './actions';
 import { MainPage } from './pages';
-import { CreateOrEditProduct, MenuForm } from './pages/Menu';
+import { CreateOrEditProduct, MenuContent, MenuForm } from './pages/Menu';
 import { BiAbacus } from 'react-icons/bi';
 import { BarCard } from './pages/Bar-card/Bar-card';
 
@@ -49,10 +49,11 @@ export const Pub = () => {
 					<Route path={'/register'} element={<Registration />} />
 					<Route path={'/login'} element={<Authorization />} />
 					<Route path={'/menu'} element={<AllMenuPositions />} />
+					<Route path={'/add-new-pos'} element={<CreateOrEditProduct />} />
 					<Route path={'/menu/:id'} element={<CreateOrEditProduct />} />
-					<Route path={'/menu/:id/edit'} element={<MenuForm />} />
+					<Route path={'/menu/:id/edit'} element={<CreateOrEditProduct />} />
 					<Route path={'/users'} element={<div>Users</div>} />
-					<Route path={'/barnayakarta'} element={<BarCard />} />
+					<Route path={'/drink-menu'} element={<BarCard />} />
 				</Routes>
 			</Wrapper>
 			<Footer />

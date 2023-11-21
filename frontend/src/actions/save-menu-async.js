@@ -1,14 +1,14 @@
 import { request } from '../utils';
 import { setMenuData } from './set-menu-data';
 
-export const saveMenuAsync = (id, newPostData) => (dispatch) => {
-    const saveRequest = id ?
-        request(`/menu/${id}`, 'PATCH', newPostData) :
-        request('/menu', 'POST', newPostData);
+export const saveMenuAsync = (id, newMenuData) => (dispatch) => {
+	const saveRequest = id
+		? request(`/menu/${id}`, 'PATCH', newMenuData)
+		: request('/menu', 'POST', newMenuData);
 
-    return saveRequest.then((updatedPost) => {
-        dispatch(setMenuData(updatedPost.data));
+	return saveRequest.then((updatedMenu) => {
+		dispatch(setMenuData(updatedMenu.data));
 
-        return updatedPost.data;
-    })
+		return updatedMenu.data;
+	});
 };
