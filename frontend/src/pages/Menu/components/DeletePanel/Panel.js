@@ -6,7 +6,7 @@ import {ROLES} from "../../../../constants";
 import {MdDeleteForever} from "react-icons/md";
 import {removeMenuPosAsync} from "../../../../actions";
 
-export const Panel = ({className, id, publishedAt, editButton}) => {
+export const Panel = ({id, publishedAt, editButton}) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const userRole = useSelector(selectUserRole);
@@ -35,7 +35,7 @@ export const Panel = ({className, id, publishedAt, editButton}) => {
     const isAdmin = checkAccess([ROLES.ADMIN], userRole);
 
     return (
-        <div className={className}>
+        <div className=''>
             {isAdmin && (
                 <div className="buttons">
                     {editButton}

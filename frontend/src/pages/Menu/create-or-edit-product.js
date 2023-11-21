@@ -35,11 +35,12 @@ export const CreateOrEditProduct = () => {
     if (isLoading) {
         return null;
     }
-    console.log(menu)
     const MenuPage =
         isCreating || isEditing ? (
             <div className=''>
-                <MenuForm menu={menu}/>
+                <MenuForm
+                    menu={menu}
+                />
             </div>
         ) : (
             <div className=''>

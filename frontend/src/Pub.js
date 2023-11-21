@@ -1,14 +1,14 @@
 import './App.css';
 import {Route, Routes} from 'react-router-dom';
 import {Header, Footer} from './components';
-import {Authorization, Menu} from './pages';
+import {Authorization, AllMenuPositions} from './pages';
 import {Registration} from './pages/registration/Registration';
 import styled from 'styled-components';
 import {useDispatch} from "react-redux";
 import {useLayoutEffect} from "react";
 import {setUser} from "./actions";
 import {MainPage} from "./pages";
-import {MenuContent, CreateOrEditProduct} from "./pages/Menu";
+import {CreateOrEditProduct, MenuForm} from "./pages/Menu";
 
 
 const Wrapper = styled.div`
@@ -49,9 +49,9 @@ export const Pub = () => {
                     <Route path={'/'} element={<MainPage/>}/>
                     <Route path={'/register'} element={<Registration/>}/>
                     <Route path={'/login'} element={<Authorization/>}/>
-                    <Route path={'/menu'} element={<Menu/>}/>
+                    <Route path={'/menu'} element={<AllMenuPositions/>}/>
                     <Route path={'/menu/:id'} element={<CreateOrEditProduct/>}/>
-                    <Route path={'/menu/:id/edit'} element={<div>Menu</div>}/>
+                    <Route path={'/menu/:id/edit'} element={<MenuForm/>}/>
                     <Route path={'/users'} element={<div>Users</div>}/>
                 </Routes>
             </Wrapper>

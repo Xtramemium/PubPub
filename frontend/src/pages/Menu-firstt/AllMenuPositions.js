@@ -9,7 +9,7 @@ import {useSelector} from "react-redux";
 import {selectMenuPos, selectUserRole} from "../../selectors";
 
 
-export const Menu = () => {
+export const AllMenuPositions = () => {
     const [menu, setMenu] = useState([]);
     const [page, setPage] = useState(1);
     const [lastPage, setLastPage] = useState(1);
@@ -42,7 +42,7 @@ export const Menu = () => {
                 <Search searchPhrase={searchPhrase} onChange={onSearch}/>
                 {menu.length > 0 ? (
                     <div className="mt-16 flex justify-center flex-col w-[500px]">
-                        {menu.map(({id, title, imageUrl, publishedAt,}) => (
+                        {menu.map(({id, title, imageUrl,}) => (
                             <SingleMenuPos
                                 key={id}
                                 id={id}
@@ -55,9 +55,6 @@ export const Menu = () => {
                     <div className="no-posts-found">Статьи не найдены</div>
                 )}
             </div>
-            {/*            {lastPage > 1 && menu.length > 0 && (
-                <Pagination page={page} lastPage={lastPage} setPage={setPage}/>
-            )}*/}
         </div>
     )
 }

@@ -7,7 +7,7 @@ export const MenuContent = ({
                                 menu: {id, title, imageUrl, content},
                             }) => {
     const navigate = useNavigate();
-
+    console.log(id, title, content,'Content')
     return (
         <section className='bg-amber-600/40 h-full p-[30px] rounded-md '>
             <div className='w-[1500px] h-full flex drop-shadow-md'>
@@ -21,6 +21,8 @@ export const MenuContent = ({
                         margin="-20px 0 20px"
                         editButton={
                             <FaEdit
+                                className='cursor-pointer'
+
                                 onClick={() => navigate(`/menu/${id}/edit`)}
                             />
                         }

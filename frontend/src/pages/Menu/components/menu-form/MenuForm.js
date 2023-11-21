@@ -2,16 +2,15 @@ import {useLayoutEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 import {Input} from '../../../../components';
-/*import {HiSave} from "react-icons/hi";
-import {SpecialPanel} from '../special-panel/special-panel';*/
-import { saveMenuAsync } from '../../../../actions';
-import {Panel} from "../DeletePanel/Panel";
 import {HiSave} from "react-icons/hi";
+// import {SpecialPanel} from '../special-panel/special-panel';
+import {saveMenuAsync} from '../../../../actions';
+import {Panel} from "../DeletePanel/Panel";
+
 
 export const MenuForm = ({
-                      className,
-                      menu: {id, title, imageUrl, content},
-                  }) => {
+                             menu: {id, title, imageUrl, content}
+                         }) => {
     const [imageUrlValue, setImageUrlValue] = useState(imageUrl);
     const [titleValue, setTitleValue] = useState(title);
     const contentRef = useRef(null);
@@ -22,7 +21,7 @@ export const MenuForm = ({
     }, [imageUrl, title]);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
+    console.log(id, title, content, 'Menu Form')
     const onSave = () => {
 
         dispatch(
@@ -38,7 +37,7 @@ export const MenuForm = ({
     const onTitleChange = ({target}) => setTitleValue(target.value);
 
     return (
-        <div className={className}>
+        <div >
             <Input
                 value={imageUrlValue}
                 placeholder="Изображение..."

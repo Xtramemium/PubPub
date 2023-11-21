@@ -1,3 +1,3 @@
-export * from './Menu-firstt/Menu'
+export * from './Menu-firstt/AllMenuPositions'
 export * from './authorization/Authorization'
 export * from './MainPage'

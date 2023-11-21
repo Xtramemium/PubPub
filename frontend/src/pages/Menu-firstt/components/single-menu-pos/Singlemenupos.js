@@ -7,9 +7,9 @@ export const SingleMenuPos = ({
                               }) => {
 
     return (
-        <div>
+        <div >
             <Link to={`/menu/${id}`}>
-                <img src={imageUrl} alt={title}/>
+                <img className='rounded-md' src={imageUrl} alt={title}/>
                 <div className="">
                     <h4>{title}</h4>
                 </div>

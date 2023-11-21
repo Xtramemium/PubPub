@@ -3,8 +3,8 @@ import { setMenuData } from './set-menu-data';
 
 export const saveMenuAsync = (id, newPostData) => (dispatch) => {
     const saveRequest = id ?
-        request(`/posts/${id}`, 'PATCH', newPostData) :
-        request('/posts', 'POST', newPostData);
+        request(`/menu/${id}`, 'PATCH', newPostData) :
+        request('/menu', 'POST', newPostData);
 
     return saveRequest.then((updatedPost) => {
         dispatch(setMenuData(updatedPost.data));
