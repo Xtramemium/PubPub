@@ -1,6 +1,7 @@
 
 body {
     background-image: url("https://i.imgur.com/6HIZS9Q.jpg");
+    max-width: fit-content;
     background-color: black;
     background-repeat: no-repeat;
     color: white;
