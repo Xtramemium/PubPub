@@ -16,11 +16,9 @@ function deleteMenuPosition(id) {
     return Menu.deleteOne({_id: id})
 }
 
-async function getWholeMenu(search = '', limit = 10, page = 1) {
+async function getWholeMenu(search = '') {
     const [menuPositions, count] = await Promise.all([
         Menu.find({title: {$regex: search, $options: 'i'}})
-            .limit(limit)
-            .skip((page - 1) * limit)
             .sort({createdAt: -1}),
         Menu.countDocuments({title: {$regex: search, $options: 'i'}})
     ])
@@ -28,7 +26,6 @@ async function getWholeMenu(search = '', limit = 10, page = 1) {
 
     return {
         positions: menuPositions,
-        lastPage: Math.ceil(count / limit)
     }
 }
 

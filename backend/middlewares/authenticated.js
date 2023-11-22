@@ -1,5 +1,5 @@
 const User = require('../models/User')
-const { verify } = require("../helpers/token")
+const { verify } = require("../transformers/token")
 
 module.exports = async function (req, res, next) {
     try {

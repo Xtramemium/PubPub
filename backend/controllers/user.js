@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
-const { generate } = require('../helpers/token');
+const { generate } = require('../transformers/token');
 const ROLES = require('../constants/roles');
 
 async function register(login, password) {

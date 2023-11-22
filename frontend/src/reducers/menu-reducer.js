@@ -3,6 +3,7 @@ import { ACTION_TYPE } from '../actions';
 const initialPostState = {
 	id: '',
 	title: '',
+	weight: '',
 	imageUrl: '',
 	content: '',
 };

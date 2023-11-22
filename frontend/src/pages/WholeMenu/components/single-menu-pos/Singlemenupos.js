@@ -4,13 +4,17 @@ export const SingleMenuPos = ({
 	id = { id },
 	title = { title },
 	imageUrl = { imageUrl },
+	weight = { weight },
 }) => {
 	return (
 		<div className="w-[400px]">
 			<Link to={`/menu/${id}`}>
 				<img className="rounded-md" src={imageUrl} alt={title} />
-				<div className="">
-					<h4>{title}</h4>
+				<div className="flex justify-between">
+					<div>
+						<h4>{title}</h4>
+					</div>
+					<div className="opacity-70 text-2xl">{weight} грамм</div>
 				</div>
 			</Link>
 		</div>

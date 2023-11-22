@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { Header, Footer } from './components';
+import { Header, Footer, Error } from './components';
 import { Authorization, AllMenuPositions } from './pages';
 import { Registration } from './pages/registration/Registration';
 import styled from 'styled-components';
@@ -11,6 +11,7 @@ import { MainPage } from './pages';
 import { CreateOrEditProduct, MenuContent, MenuForm } from './pages/Menu';
 import { BiAbacus } from 'react-icons/bi';
 import { BarCard } from './pages/Bar-card/Bar-card';
+import { ERROR } from './constants/error';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -54,6 +55,10 @@ export const Pub = () => {
 					<Route path={'/menu/:id/edit'} element={<CreateOrEditProduct />} />
 					<Route path={'/users'} element={<div>Users</div>} />
 					<Route path={'/drink-menu'} element={<BarCard />} />
+					<Route
+						path={'*'}
+						element={<Error error={ERROR.PAGE_NOT_EXIST}></Error>}
+					/>
 				</Routes>
 			</Wrapper>
 			<Footer />

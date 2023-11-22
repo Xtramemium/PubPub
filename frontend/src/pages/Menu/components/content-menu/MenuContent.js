@@ -3,11 +3,19 @@ import { H2 } from '../../../../components';
 import { FaEdit } from 'react-icons/fa';
 import { Panel } from '../DeletePanel/Panel';
 
-export const MenuContent = ({ menu: { id, title, imageUrl, content } }) => {
+export const MenuContent = ({ menu: { id, title, weight, imageUrl, content } }) => {
 	const navigate = useNavigate();
-	console.log(id, title, content, 'Content');
 	return (
 		<section className="bg-amber-600/40 h-full p-[30px] rounded-md ">
+			<Panel
+				id={id}
+				editButton={
+					<FaEdit
+						className="cursor-pointer ml-4"
+						onClick={() => navigate(`/menu/${id}/edit`)}
+					/>
+				}
+			/>
 			<div className="w-[1500px] h-full flex drop-shadow-md">
 				<img
 					className="w-[500px] h-[350px] float-left rounded-md object-cover"
@@ -16,18 +24,8 @@ export const MenuContent = ({ menu: { id, title, imageUrl, content } }) => {
 				/>
 				<div className="ml-40 ">
 					<h2 className="text-5xl mb-5 font-Cormodant font-bold ">{title}</h2>
-					<p className="opacity-60 items-center">500гр</p>
-					<Panel
-						id={id}
-						margin="-20px 0 20px"
-						editButton={
-							<FaEdit
-								className="cursor-pointer"
-								onClick={() => navigate(`/menu/${id}/edit`)}
-								//onClick={() => navigate(`/post/${id}/edit`)}
-							/>
-						}
-					/>
+					<p className="opacity-60 items-center">{weight} Гр</p>
+
 					<div>{content}</div>
 				</div>
 			</div>

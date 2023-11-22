@@ -7,6 +7,10 @@ const MenuSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    weight: {
+        type: String,
+        required: false
+    },
     image: {
         type: String,
         required: true,
