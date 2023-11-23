@@ -56,7 +56,7 @@ export const MenuForm = ({ menu: { id, title, weight, imageUrl, content } }) => 
 					onChange={onWeightChange}
 				/>
 				<div
-					className="border-solid border rounded-md caret-blue-700 mt-10"
+					className="border-solid border rounded-md mt-10 p-3"
 					ref={contentRef}
 					contentEditable={true}
 					suppressContentEditableWarning={true}

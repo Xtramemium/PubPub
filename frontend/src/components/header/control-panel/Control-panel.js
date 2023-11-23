@@ -1,7 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { BiLogOutCircle } from 'react-icons/bi';
 import { IoMdArrowRoundBack } from 'react-icons/io';
-import { FaUsersGear } from 'react-icons/fa6';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUserLogin, selectUserRole } from '../../../selectors';
 import { ROLES } from '../../../constants';
@@ -27,24 +26,19 @@ export const ControlPanel = () => {
 				) : (
 					<div>
 						<BiLogOutCircle
-							className="cursor-pointer transition ease-in-out duration-200 hover:scale-125"
+							className="ml-10 text-3xl cursor-pointer transition ease-in-out duration-200 hover:scale-125"
 							onClick={onLogout}
 						/>
-						<div className="text-">{login}</div>
+						<div className="text-3xl m-3">{login}</div>
 					</div>
 				)}
 			</div>
-			<div className="flex justify-end items-center mt-2">
-				<div className="pr-2">
+			<div className="flex justify-center items-center">
+				<div className="text-4xl">
 					<IoMdArrowRoundBack
 						className="cursor-pointer "
 						onClick={() => navigate(-1)}
 					/>
-				</div>
-				<div>
-					<Link to="/users">
-						<FaUsersGear />
-					</Link>
 				</div>
 			</div>
 		</div>

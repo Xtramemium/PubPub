@@ -24,7 +24,10 @@ export const Panel = ({ id, publishedAt, editButton }) => {
 			{isAdmin && (
 				<div className="flex flex-row-reverse cursor-pointer text-3xl">
 					{editButton}
-					<MdDeleteForever onClick={() => onMenuPosRemove(id)} />
+					<MdDeleteForever
+						className="text-black"
+						onClick={() => onMenuPosRemove(id)}
+					/>
 				</div>
 			)}
 		</div>

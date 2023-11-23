@@ -3,10 +3,10 @@ import { images } from '../../constants';
 
 export const MainPage = () => {
 	return (
-		<div>
+		<div className="pr-14 pl-14">
 			<section>
 				<div>
-					<h1 className="flex text-9xl font-Yeseva mt-10 justify-center">
+					<h1 className="transition duration-700 ease-in-out flex text-9xl font-Yeseva mt-10 justify-center">
 						Бар "Щука"{' '}
 					</h1>
 				</div>
@@ -23,7 +23,7 @@ export const MainPage = () => {
 					</Link>
 				</div>
 			</section>
-			<section className="mt-20">
+			<div className="mt-20">
 				<div className="flex justify-center flex-wrap gap-10 scale-75">
 					<div>
 						<img
@@ -55,30 +55,97 @@ export const MainPage = () => {
 						/>
 					</div>
 				</div>
-			</section>
-			<section className="mt-20">
-				<div className="grid-block grid grid-cols-3">
+			</div>
+			<section className="mt-20 ">
+				<div className="grid-block grid grid-cols-3 grid-rows-[30rem min-content] gap-4">
 					<div>
-						<img src="https://i.imgur.com/Wv8O3G5.jpg" alt="iamge" />
+						<img
+							className="rounded-md object-cover"
+							src="https://i.imgur.com/Wv8O3G5.jpg"
+							alt="iamge"
+						/>
+					</div>
+					<div>
+						<h2 className="uppercase font-Oswald mb-6">
+							"{' '}
+							<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
+								Любимое{' '}
+							</span>
+							<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
+								место
+							</span>
+							<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
+								{' '}
+								для{' '}
+							</span>
+							<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
+								хорошего{' '}
+							</span>
+							<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
+								отдыха
+							</span>{' '}
+							"
+						</h2>
+						<h2 className="font-Oswald uppercase mb-6">
+							"{' '}
+							<span className="transition duration-300 ease-in-out hover:text-amber-400">
+								Уютно,{' '}
+							</span>{' '}
+							<span className="transition duration-300 ease-in-out hover:text-amber-400">
+								хорошие{' '}
+							</span>{' '}
+							<span className="transition duration-300 ease-in-out hover:text-amber-400">
+								напитки,{' '}
+							</span>{' '}
+							<span className="transition duration-300 ease-in-out hover:text-amber-400">
+								{' '}
+								вкусная еда."
+							</span>
+						</h2>
+						<h2 className="font-Oswald uppercase">
+							" Теплая атмосфера. Вкусное пиво на любой вкус. Закуска шах и
+							мат "
+						</h2>
+					</div>
+					<div>
+						<img
+							className="rounded-md object-cover"
+							src="https://i.imgur.com/hLMSPWE.jpg"
+							alt="https://i.imgur.com/hLMSPWE.jpg"
+						/>
+					</div>
+					<div>
+						<p>
+							<span className="text-amber-600 font-Oswald">
+								"Щука" — это не просто бар
+							</span>
+							, это настоящая история, где в каждом уголке встречаются
+							предметы из разных временных эпох, создавая уют и ностальгию.
+						</p>
+					</div>
+					<div>
+						<img
+							className="rounded-md object-cover"
+							src="https://i.imgur.com/vM92Mui.jpg"
+							alt="https://i.imgur.com/vM92Mui.jpg"
+						/>
+					</div>
+					<div>
+						{' '}
+						<div>
+							<p>
+								<span className="text-blue-500">
+									Здесь не только о пиве
+								</span>{' '}
+								— вас поразит разнообразие вкусов европейской и китайской
+								кухни, приготовленных с особым мастерством. В "Щуке"
+								каждый визит становится уникальным путешествием в прошлое
+								и пивным открытием.
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
-			<Menu.Button className="inline-flex items-center justify-center space-x-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-semibold leading-5 text-gray-800 hover:border-gray-300 hover:text-gray-900 hover:shadow-sm focus:ring focus:ring-gray-300 focus:ring-opacity-25 active:border-gray-200 active:shadow-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-gray-600 dark:hover:text-gray-200 dark:focus:ring-gray-600 dark:focus:ring-opacity-40 dark:active:border-gray-700">
-				<span>John</span>
-				<svg
-					className="hi-mini hi-chevron-down inline-block h-5 w-5 opacity-40"
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 20 20"
-					fill="currentColor"
-					aria-hidden="true"
-				>
-					<path
-						fillRule="evenodd"
-						d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-						clipRule="evenodd"
-					/>
-				</svg>
-			</Menu.Button>
 		</div>
 	);
 };

@@ -13,11 +13,13 @@ export const AllMenuPositions = () => {
 	const [searchPhrase, setSearchPhrase] = useState('');
 	const [shouldSearch, setShouldSearch] = useState(false);
 	const userRole = useSelector(selectUserRole);
+	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
+		setIsLoading(true);
 		request(`/menu?search=${searchPhrase}`).then(({ data: { menu } }) => {
-			console.log(menu);
 			setMenu(menu);
+			setIsLoading(false);
 		});
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [shouldSearch]);
@@ -29,7 +31,13 @@ export const AllMenuPositions = () => {
 	};
 
 	const isAdmin = checkAccess([ROLES.ADMIN], userRole);
-
+	if (isLoading) {
+		return (
+			<div className="">
+				<span className="loading loading-infinity loading-lg"></span>
+			</div>
+		);
+	}
 	return (
 		<div className="flex justify-center items-center">
 			<div>
@@ -46,7 +54,7 @@ export const AllMenuPositions = () => {
 					<Search searchPhrase={searchPhrase} onChange={onSearch} />
 				</div>
 				{menu.length > 0 ? (
-					<div className="mt-16 flex justify-center grid-cols-2 gap-8">
+					<div className="mt-16 justify-center grid grid-cols-3 gap-8">
 						{menu.map(({ id, title, imageUrl, weight }) => (
 							<SingleMenuPos
 								key={id}
@@ -58,7 +66,9 @@ export const AllMenuPositions = () => {
 						))}
 					</div>
 				) : (
-					<div className="no-posts-found">Статьи не найдены</div>
+					<div className="items-center flex justify-center">
+						Блюда не найдены
+					</div>
 				)}
 			</div>
 		</div>

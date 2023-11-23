@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{html,js}'],
+	darkMode: 'className',
 	theme: {
 		extend: {
 			width: {
@@ -21,8 +22,9 @@ module.exports = {
 				Oswald: 'Oswald',
 				Cormodant: 'Cormorant Garamond',
 				Yeseva: 'Yeseva One',
+				Prata: 'Prata',
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('daisyui')],
 };

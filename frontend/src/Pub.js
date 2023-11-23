@@ -1,17 +1,18 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import { Header, Footer, Error } from './components';
-import { Authorization, AllMenuPositions } from './pages';
-import { Registration } from './pages/registration/Registration';
-import styled from 'styled-components';
+import { Header, Footer, Error, ButtonToTop } from './components';
+import {
+	Authorization,
+	AllMenuPositions,
+	MainPage,
+	CreateOrEditProduct,
+	Registration,
+} from './pages';
 import { useDispatch } from 'react-redux';
 import { useLayoutEffect } from 'react';
 import { setUser } from './actions';
-import { MainPage } from './pages';
-import { CreateOrEditProduct, MenuContent, MenuForm } from './pages/Menu';
-import { BiAbacus } from 'react-icons/bi';
-import { BarCard } from './pages/Bar-card/Bar-card';
 import { ERROR } from './constants/error';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -20,7 +21,6 @@ const Wrapper = styled.div`
 	padding: 30px;
 	flex: 1 1 auto;
 `;
-
 export const Pub = () => {
 	const dispatch = useDispatch();
 
@@ -43,6 +43,7 @@ export const Pub = () => {
 
 	return (
 		<>
+			<ButtonToTop />
 			<Header />
 			<Wrapper>
 				<Routes>
@@ -53,8 +54,6 @@ export const Pub = () => {
 					<Route path={'/add-new-pos'} element={<CreateOrEditProduct />} />
 					<Route path={'/menu/:id'} element={<CreateOrEditProduct />} />
 					<Route path={'/menu/:id/edit'} element={<CreateOrEditProduct />} />
-					<Route path={'/users'} element={<div>Users</div>} />
-					<Route path={'/drink-menu'} element={<BarCard />} />
 					<Route
 						path={'*'}
 						element={<Error error={ERROR.PAGE_NOT_EXIST}></Error>}
@@ -62,6 +61,7 @@ export const Pub = () => {
 				</Routes>
 			</Wrapper>
 			<Footer />
+			<div className="bg-black"></div>
 		</>
 	);
 };

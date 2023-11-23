@@ -6,6 +6,8 @@ import { selectMenuPos } from '../../selectors';
 import { MenuForm } from './components/menu-form/MenuForm';
 import { MenuContent } from './components/content-menu/MenuContent';
 import { Error } from '../../components';
+import { Private } from '../../components/Private/private';
+import { ROLES } from '../../constants';
 
 export const CreateOrEditProduct = () => {
 	const [error, setError] = useState(null);
@@ -33,13 +35,19 @@ export const CreateOrEditProduct = () => {
 	}, [dispatch, params.id, isCreating]);
 
 	if (isLoading) {
-		return null;
+		return (
+			<div className="">
+				<span className="loading loading-infinity loading-lg"></span>
+			</div>
+		);
 	}
 	const MenuPage =
 		isCreating || isEditing ? (
-			<div className="">
-				<MenuForm menu={menu} />
-			</div>
+			<Private access={[ROLES.ADMIN]} serverError={error}>
+				<div className="">
+					<MenuForm menu={menu} />
+				</div>
+			</Private>
 		) : (
 			<div className="">
 				<MenuContent menu={menu} />
