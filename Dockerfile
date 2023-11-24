@@ -2,6 +2,8 @@ FROM node:16
 
 WORKDIR /usr/src/app
 
+COPY . .
+
 RUN npm cache clean --force
 
 ENV NODE_OPTIONS="--max_old_space_size=4096"
