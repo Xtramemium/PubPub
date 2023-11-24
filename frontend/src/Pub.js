@@ -61,7 +61,6 @@ export const Pub = () => {
 				</Routes>
 			</Wrapper>
 			<Footer />
-			<div className="bg-black"></div>
 		</>
 	);
 };

@@ -25,7 +25,7 @@ export const Panel = ({ id, publishedAt, editButton }) => {
 				<div className="flex flex-row-reverse cursor-pointer text-3xl">
 					{editButton}
 					<MdDeleteForever
-						className="text-black"
+						className="text-black dark:text-white"
 						onClick={() => onMenuPosRemove(id)}
 					/>
 				</div>

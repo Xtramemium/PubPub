@@ -11,7 +11,7 @@ const {
 	deleteMenuPosition,
 } = require('./controllers/menu');
 const mapUser = require('./transformers/transform-user');
-const authenticated = require('./middlewares/authenticated');
+const authenticated = require('./middlewares/isAuth');
 const hasRole = require('./middlewares/hasRole');
 const ROLES = require('./constants/roles');
 const mapMenu = require('./transformers/transform-menu');

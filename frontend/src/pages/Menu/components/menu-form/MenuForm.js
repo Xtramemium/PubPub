@@ -38,7 +38,7 @@ export const MenuForm = ({ menu: { id, title, weight, imageUrl, content } }) => 
 	const onWeightChange = ({ target }) => setWeightValue(target.value);
 
 	return (
-		<section className="bg-amber-600/40 h-full p-[30px] rounded-md ">
+		<section className="bg-amber-600/40 h-full p-[30px] rounded-md  dark:bg-black/60">
 			<div className=" justify-center w-full ">
 				<Input
 					value={imageUrlValue}
@@ -63,7 +63,11 @@ export const MenuForm = ({ menu: { id, title, weight, imageUrl, content } }) => 
 				>
 					{content}
 				</div>
-				<Panel id={id} margin="20px 0" editButton={<HiSave onClick={onSave} />} />
+				<Panel
+					id={id}
+					margin="20px 0"
+					editButton={<HiSave className="text-white" onClick={onSave} />}
+				/>
 			</div>
 		</section>
 	);

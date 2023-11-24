@@ -66,46 +66,98 @@ export const MainPage = () => {
 						/>
 					</div>
 					<div>
-						<h2 className="uppercase font-Oswald mb-6">
-							"{' '}
-							<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
-								Любимое{' '}
-							</span>
-							<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
-								место
-							</span>
-							<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
-								{' '}
-								для{' '}
-							</span>
-							<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
-								хорошего{' '}
-							</span>
-							<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
-								отдыха
-							</span>{' '}
-							"
-						</h2>
-						<h2 className="font-Oswald uppercase mb-6">
-							"{' '}
-							<span className="transition duration-300 ease-in-out hover:text-amber-400">
-								Уютно,{' '}
-							</span>{' '}
-							<span className="transition duration-300 ease-in-out hover:text-amber-400">
-								хорошие{' '}
-							</span>{' '}
-							<span className="transition duration-300 ease-in-out hover:text-amber-400">
-								напитки,{' '}
-							</span>{' '}
-							<span className="transition duration-300 ease-in-out hover:text-amber-400">
-								{' '}
-								вкусная еда."
-							</span>
-						</h2>
-						<h2 className="font-Oswald uppercase">
-							" Теплая атмосфера. Вкусное пиво на любой вкус. Закуска шах и
-							мат "
-						</h2>
+						<Link
+							to={
+								'https://yandex.ru/web-maps/org/13044241757/reviews?reviews[publicId]=97qd975v2zudkqe1fj4gdfqzw8&utm_source=review'
+							}
+							target="_blank"
+						>
+							<h2 className="uppercase font-Oswald mb-6">
+								"{' '}
+								<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
+									Любимое{' '}
+								</span>
+								<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
+									место
+								</span>
+								<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
+									{' '}
+									для{' '}
+								</span>
+								<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
+									хорошего{' '}
+								</span>
+								<span className="transition duration-300 ease-in-out hover:alert-warning hover:text-blue-500">
+									отдыха
+								</span>{' '}
+								"
+							</h2>
+						</Link>
+						<Link
+							to="https://yandex.ru/web-maps/org/13044241757/reviews?reviews[publicId]=nffbtdjv9unacnkr6ngwux4m98&utm_source=review"
+							target="_blank"
+						>
+							<h2 className="font-Oswald uppercase mb-6">
+								"{' '}
+								<span className="transition duration-300 ease-in-out hover:text-amber-400">
+									Уютно,{' '}
+								</span>{' '}
+								<span className="transition duration-300 ease-in-out hover:text-amber-400">
+									хорошие{' '}
+								</span>{' '}
+								<span className="transition duration-300 ease-in-out hover:text-amber-400">
+									напитки,{' '}
+								</span>{' '}
+								<span className="transition duration-300 ease-in-out hover:text-amber-400">
+									{' '}
+									вкусная еда."
+								</span>
+							</h2>
+						</Link>
+						<Link
+							to="https://yandex.ru/web-maps/org/13044241757/reviews?reviews[publicId]=k657grzc5dn434wzzcxmtr93qc&utm_source=review"
+							target="_blank"
+						>
+							<h2 className="font-Oswald uppercase">
+								"{' '}
+								<span className="transition duration-300 ease-in-out hover:text-emerald-400">
+									Теплая
+								</span>{' '}
+								<span className="transition duration-300 ease-in-out hover:text-emerald-400">
+									атмосфера
+								</span>{' '}
+								.{' '}
+								<span className="transition duration-300 ease-in-out hover:text-emerald-400">
+									Вкусное{' '}
+								</span>
+								<span className="transition duration-300 ease-in-out hover:text-emerald-400">
+									пиво{' '}
+								</span>
+								<span className="transition duration-300 ease-in-out hover:text-emerald-400">
+									на{' '}
+								</span>{' '}
+								<span className="transition duration-300 ease-in-out hover:text-emerald-400">
+									любой{' '}
+								</span>
+								<span className="transition duration-300 ease-in-out hover:text-emerald-400">
+									вкус
+								</span>{' '}
+								.{' '}
+								<span className="transition duration-300 ease-in-out hover:text-emerald-400">
+									Закуска{' '}
+								</span>
+								<span className="transition duration-300 ease-in-out hover:text-emerald-400">
+									шах{' '}
+								</span>
+								<span className="transition duration-300 ease-in-out hover:text-emerald-400">
+									и{' '}
+								</span>
+								<span className="transition duration-300 ease-in-out hover:text-emerald-400">
+									мат
+								</span>{' '}
+								"
+							</h2>
+						</Link>
 					</div>
 					<div>
 						<img
@@ -118,8 +170,8 @@ export const MainPage = () => {
 						<p>
 							<span className="text-amber-600 font-Oswald">
 								"Щука" — это не просто бар
-							</span>
-							, это настоящая история, где в каждом уголке встречаются
+							</span>{' '}
+							- это настоящая история, где в каждом уголке встречаются
 							предметы из разных временных эпох, создавая уют и ностальгию.
 						</p>
 					</div>

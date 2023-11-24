@@ -7,7 +7,7 @@ export const SingleMenuPos = ({
 	weight = { weight },
 }) => {
 	return (
-		<div className="w-[400px]">
+		<div className="w-[400px] transition duration-500 rounded-box  ease-in-out p-4 hover:bg-amber-600  dark:hover:bg-black/60">
 			<Link to={`/menu/${id}`}>
 				<img className="rounded-md" src={imageUrl} alt={title} />
 				<div className="flex justify-between">

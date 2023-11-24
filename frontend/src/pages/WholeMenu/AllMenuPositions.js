@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Search } from '../../components';
 import { checkAccess, request } from '../../utils';
-import { ROLES } from '../../constants';
 import { debounce } from '../../utils';
 import { SingleMenuPos } from './components';
-import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { selectUserRole } from '../../selectors';
+import { Link } from 'react-router-dom';
+import { ROLES } from '../../constants';
+import { useSelector } from 'react-redux';
 
 export const AllMenuPositions = () => {
 	const [menu, setMenu] = useState([]);
@@ -38,13 +38,14 @@ export const AllMenuPositions = () => {
 			</div>
 		);
 	}
+
 	return (
 		<div className="flex justify-center items-center">
 			<div>
 				{isAdmin && (
 					<Link to="/add-new-pos">
 						<div className="flex justify-center ">
-							<button className="transition duration-700 ease-in-out border-solid border p-2 rounded-2xl hover:scale-110 bg-amber-700/50">
+							<button className="transition duration-700 ease-in-out border-solid border p-2 rounded-2xl hover:scale-110 bg-amber-700/50  dark:bg-black/60">
 								Добавить блюдо
 							</button>
 						</div>

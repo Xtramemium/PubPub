@@ -1,8 +1,11 @@
 import { images } from '../../constants';
-import { ControlPanel } from './control-panel/Control-panel';
 import { Link } from 'react-router-dom';
+import { ControlPanel } from './control-panel/Control-panel';
+import { useChangeTheme } from '../../hooks';
 
 export const Header = () => {
+	const handleThemeSwitch = useChangeTheme();
+
 	const scrollToContacts = () => {
 		window.scrollTo({
 			top: 2500,
@@ -68,6 +71,14 @@ export const Header = () => {
 			</div>
 			<div className="flex mr-11">
 				<ul className="flex-1 flex justify-center items-center">
+					<li className="transition duration-700 text-3xl ease-in-out  my-0 mx-4 hover:scale-125">
+						<button
+							className="rounded-btn bg-black  dark:bg-white dark:text-black p-3 flex flex-initial "
+							onClick={handleThemeSwitch}
+						>
+							Сменить тему
+						</button>
+					</li>
 					<Link to={'/ourteam'}>
 						<li className="transition duration-700 text-3xl ease-in-out  my-0 mx-4 hover:underline hover:scale-125">
 							{' '}
