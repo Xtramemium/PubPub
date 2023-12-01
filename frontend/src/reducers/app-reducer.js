@@ -11,5 +11,7 @@ export const appReducer = (state = initialAppState, action) => {
 				...state,
 				wasLogout: !state.wasLogout,
 			};
+		default:
+			return state;
 	}
 };

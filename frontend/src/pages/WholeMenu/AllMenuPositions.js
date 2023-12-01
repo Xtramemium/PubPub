@@ -33,7 +33,7 @@ export const AllMenuPositions = () => {
 	const isAdmin = checkAccess([ROLES.ADMIN], userRole);
 	if (isLoading) {
 		return (
-			<div className="">
+			<div>
 				<span className="loading loading-infinity loading-lg"></span>
 			</div>
 		);
