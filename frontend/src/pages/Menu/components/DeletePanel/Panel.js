@@ -20,7 +20,7 @@ export const Panel = ({ id, publishedAt, editButton }) => {
 	const isAdmin = checkAccess([ROLES.ADMIN], userRole);
 
 	return (
-		<div className="">
+		<div>
 			{isAdmin && (
 				<div className="flex flex-row-reverse cursor-pointer text-3xl">
 					{editButton}

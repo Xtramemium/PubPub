@@ -5,8 +5,7 @@ import { RESET_MENU_DATA, loadMenuAsync } from '../../actions';
 import { selectMenuPos } from '../../selectors';
 import { MenuForm } from './components/menu-form/MenuForm';
 import { MenuContent } from './components/content-menu/MenuContent';
-import { Error } from '../../components';
-import { Private } from '../../components/Private/private';
+import { Error, Private } from '../../components';
 import { ROLES } from '../../constants';
 
 export const CreateOrEditProduct = () => {
@@ -36,7 +35,7 @@ export const CreateOrEditProduct = () => {
 
 	if (isLoading) {
 		return (
-			<div className="">
+			<div>
 				<span className="loading loading-infinity loading-lg"></span>
 			</div>
 		);
@@ -44,12 +43,12 @@ export const CreateOrEditProduct = () => {
 	const MenuPage =
 		isCreating || isEditing ? (
 			<Private access={[ROLES.ADMIN]} serverError={error}>
-				<div className="">
+				<div>
 					<MenuForm menu={menu} />
 				</div>
 			</Private>
 		) : (
-			<div className="">
+			<div>
 				<MenuContent menu={menu} />
 			</div>
 		);
