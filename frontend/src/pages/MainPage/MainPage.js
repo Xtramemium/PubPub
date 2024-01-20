@@ -4,9 +4,9 @@ import { images } from '../../constants';
 export const MainPage = () => {
 	return (
 		<div className="pr-14 pl-14">
-			<section>
-				<div>
-					<h1 className="transition duration-700 ease-in-out flex text-9xl font-Yeseva mt-10 justify-center">
+			<section className="columns-1">
+				<div className="text-5xl">
+					<h1 className="text-5xl justify-center xl:transition duration-700 ease-in-out xl:flex xl:text-9xl xl:font-Yeseva mt-10 xl:justify-center">
 						Бар "Щука"{' '}
 					</h1>
 				</div>
@@ -65,6 +65,7 @@ export const MainPage = () => {
 							alt="iamge"
 						/>
 					</div>
+
 					<div>
 						<Link
 							to={

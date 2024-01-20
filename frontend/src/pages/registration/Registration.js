@@ -8,7 +8,7 @@ import { AuthFormError, Button, H2, Input } from '../../components';
 import { request } from '../../utils';
 import { setUser } from '../../actions';
 import { selectUserRole } from '../../selectors';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 const regFormSchema = yup.object().shape({
 	login: yup
@@ -49,7 +49,6 @@ export const Registration = () => {
 	const dispatch = useDispatch();
 	const [serverError, setServerError] = useState(null);
 	const roleId = useSelector(selectUserRole);
-	const navigate = useNavigate();
 	const onSubmit = ({ login, password }) => {
 		request('/register', 'POST', { login, password }).then(({ error, user }) => {
 			if (error) {

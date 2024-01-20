@@ -1,5 +1,4 @@
 import { Input } from '../input/Input';
-import { FcSearch } from 'react-icons/fc';
 
 export const Search = ({ searchPhrase, onChange }) => {
 	return (
